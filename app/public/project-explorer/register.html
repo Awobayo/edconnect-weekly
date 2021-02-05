@@ -12,14 +12,29 @@
 </nav>
 
 <main>
-    <h1>Signup</h1>
-    <label>First Name:<input type="text"></laabel><br /><br />
-    <label>Last Name:<input type="text"></label><br /><br />
-    <label>Email Address:<input type="email"></label><br /><br />
-    <label>Password: <input type="password" ></label><br /><br />
-    <label>Matric Number:<input type="text"></label><br /><br />
+  <h1>Signup</h1>
+   <form>
+    <label>First Name:
+      <input type="text" name="firstName"></label>
+      <br/>
+      <br/>
+    <label>Last Name:
+      <input type="text" name="lastName"></label>
+      <br/>
+      <br/>
+    <label>Email Address:
+      <input type="email" name="email"></label>
+      <br/>
+      <br/>
+    <label>Password:
+      <input type="password" name="password"></label>
+      <br/>
+      <br/>
+    <label>Matric Number:
+      <input type="text" name="matricNumber"></label>
+      <br/><br />
     <label>Program:
-      <select>
+      <select name="program">
         <option value="">computer_science</option>
         <option value="1">computer_information_systems</option>
         <option value="2">computer_technology</option>
@@ -28,7 +43,7 @@
    <br/>
    <br/>
    <label>Graduation Year: 
-      <select>
+      <select name="gradutionYear">
        <option value="">2013</option> 
        <option value="1">2014</option>
        <option value="2">2015</option>
@@ -41,9 +56,6 @@
     </label><br />
    <br/>
     <input type="submit">
-    <form>
-       
-          
-    </form>
+  </form>
 
 </main>
