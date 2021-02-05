@@ -23,10 +23,9 @@
   <h2>Update Profile</h2>
   <form name="updateProfile">
     <label>First Name:<input type="text" name="firstName"></laabel><br /><br />
-    <label>Last Name:<input type="text"></label><br /><br />
-    <label>Email Address:<input type="email"></label><br /><br />
-    <label>Password: <input type="password" ></label><br /><br />
-    <label>Matric Number:<input type="text"></label><br /><br />
+    <label>Last Name:<input type="text" name="lastName"></label><br /><br />
+    <label>Email Address:<input type="email" name="email"></label><br /><br />
+    <label>Matric Number:<input type="text" name="matricNumber"></label><br /><br />
     <label>Program:
       <select name="program">
         <option value="">computer_science</option>
@@ -37,7 +36,7 @@
    <br/>
    <br/>
    <label>Graduation Year: 
-      <select>
+      <select name="graduationYear">
        <option value="">2013</option> 
        <option value="1">2014</option>
        <option value="2">2015</option>
@@ -56,9 +55,9 @@
 <section>
   <form>
     <h1>Change Password</h1>
-    <label>Current Password: <input type="password" ></label><br /><br />
-    <label>New Password: <input type="password" ></label><br /><br />
-    <label>Confirm Password: <input type="password" ></label><br /><br />
+    <label>Current Password: <input type="password" name="currentPassword" ></label><br /><br />
+    <label>New Password: <input type="password" name="newPassword"></label><br /><br />
+    <label>Confirm Password: <input type="password" name="confirmPassword" ></label><br /><br />
     <input type="submit">         
  </form>
 </section>
