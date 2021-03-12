@@ -1,44 +1,223 @@
 <!DOCTYPE html>
-<header>
-<h1>Project Explorer</h1><br/>
-<h2>One Stop Database For Academic Projects</h2>
-</header>
-<nav>
-    <a href="index.html">Home</a> 
-    <a href="search.html">Projects</a>
-    <a href="login.html">Login</a>
-    <a href="register.html">Register</a> 
-</nav>
+<head>
+  <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Project Explorer</title>
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <style>
+          header {
+              background-color: royalblue;
+              display:flex;
+              width: 100%;
+              flex-direction: row;
+              align-items: center;
+              justify-content: space-between;
+              color: white;
+          }
+  
+          header .left-nav {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              padding: 10px;
+          }
+          header .right-nav {
+              padding: 10px;
+          }
+  
+          header h3 {
+              color: white;
+              padding-right: 10px;
+          }
+          
+          header form .form-control{
+              border: none;
+              margin-right: 5px;
+              padding-right: 10px;
+          }
+  
+          header form input .btn .btn-outline-light {
+              border: 1px solid white;
+              padding: 10px;
+          }
+  
+          header a {
+              padding-left: 10px;
+              opacity: 0.5;
+              color: white;
+          }
+          header a:hover{
+              opacity: 1;
+          }
+           body {
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+           }
+          main {
+              width: 960px;
+              align-items: center;
+              margin-top: 50px;
+          }
 
-<section>
-  <h2>Search Project By</h2>
-  <form name="searchForm">
-   <input type="text" name="searchTerm" placeholder="Project Name, Authors, Abstract, Tags"><br/>
-   <br/>
-   <label>Search By<br/>
-       <select name="searchType"> 
+          .container .form-group{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          align-items: center;
+          }
+
+          main .card{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        main .card .card-body{
+            border: 1px solid silver;
+            margin: 1px;
+            }
+
+        main .card .card-subtitle{
+            color: gray;
+        }
+
+        main .card .card-link{
+            display: flex;
+            flex-direction: row;
+        } main .card{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        main .card .card-body{
+            border: 1px solid silver;
+            margin: 1px;
+            }
+
+        main .card .card-subtitle{
+            color: gray;
+        }
+
+        main .card .card-link{
+            display: flex;
+            flex-direction: row;
+        }
+
+        main h5 {
+            color: darkgray;
+            padding-top: 4px;
+        }
+        section .section-header {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            margin-top: 20px;
+        }
+
+        section .section-header h4 {
+            margin-right: 10px;
+        }
+  
+          footer {
+              width: 960px;
+              display: flex;
+              flex-direction: row;
+              justify-content: end;
+              color: grey;
+              background-color: lightgray;
+              padding: 10px;
+              margin-top: 30px;
+              margin-bottom: 10px;
+          }
+          
+          footer .spacer{
+              padding: 0px 5px 0 5px;
+          }
+  
+          footer a{
+              color: black;
+          }
+      </style>
+  </head>
+  <body>
+  <header>
+      <div class="left-nav">
+          <div>
+              <h3>Project Explorer</h3>
+          </div>
+          <form name="searchForm" class="form-inline">
+              <input type="text" placeholder="Search Projects" class="form-control"/>
+              <input type="button" class="btn btn-outline-light" value="Search"/>
+          </form>
+          <div>
+              <a href="#">Submit</a>
+          </div>
+      </div>
+  
+      <div class="right-nav">
+          <a href="register.html">Sign up</a>
+          <a href="login.html">Login</a>
+      </div>
+  </header>
+
+<main>
+  <h2>Project Gallery</h2>
+<div class="container bg-light p-3">
+  <form class="form-group form-row" name="searchForm">
+   <input class="form-control form-control-lg" type="text" name="searchTerm" placeholder="Search project name, authors, abstract, tags">
+   
+   <label class="form-label">Search By
+       <select class="form-control form-control-lg" name="searchType"> 
            <option value="Name">Name</option>
            <option value="Abstract">Abstract</option>
            <option value="Authors">Authors</option>
            <option value="Tags">Tags</option>
          </select>
     </label>
-   <br/>
-   <br />
-    <input type="submit" value="Search">  
+   
+    <input type="button" class="btn btn-primary btn btn-lg" value="Submit"/>  
   </form>
+</div>
 
-</section>
-  <h2>Search Result</h2>
-      <div>
-          <h3>Project 1</h3>
-            <ul>
-             <li>Name:Project 1</li>
-             <li>Description:Male</li>
-             <li>Program:Fullstack</li>
-             <li>Authors:John Doe</li>
-             <li>Tags:#html</li>
-             <li>Year:2020</li>
-            </ul>
+<section>
+    <div class="section-header">
+        <h4>All Projects</h4> <h5>(0 results)</h5>
+    </div>
+<div class="card w-50">
+    <div class="card-body">
+            <h4 class="card-title"><a href="#">Project Title</a></h4>
+            <h5 class="card-subtitle">Author 1, Author 2</h5>
+            </br>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </br>
+            <div class="card-link">
+            <a href="#" class="card-link">#html</a>
+            <a href="#" class="card-link">#css</a>
+            <a href="#" class="card-link">#javascript</a>
+            </div>
+    </div>
+
+    <div class="card-body">
+        <h4 class="card-title"><a href="#">Project Title</a></h4>
+        <h5 class="card-subtitle">Author 1, Author 2</h5>
+        </br>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </br>
+        <div class="card-link">
+            <a href="#" class="card-link">#html</a>
+            <a href="#" class="card-link">#css</a>
+            <a href="#" class="card-link">#javascript</a>
+        </div>
+    </div>
      </div>
 </section>
+</main>
+
+<footer>
+  <span>Project Explorer &copy; 2020</span>
+  <span class="spacer">&middot;</span>
+  <a href="#">Edconnect</a>
+</footer>
+</body>

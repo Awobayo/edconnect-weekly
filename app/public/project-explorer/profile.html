@@ -1,63 +1,235 @@
 <!DOCTYPE html>
-<header>
-<h1>Project Explorer</h1><br/>
-<h2>One Stop Database For Academic Projects</h2>
-</header>
-<nav>
-    <a href="index.html">Home</a> 
-    <a href="search.html">Projects</a>
-    <a href="login.html">Login</a>
-    <a href="register.html">Register</a>
-</nav>
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Explorer</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        header {
+            background-color: royalblue;
+            display:flex;
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+        }
 
-    <section>
-        <h2>John Doe</h2>
-        <p>john.doe@gmail.com</p>
-        <ul>
-            <li>Program: Computer Science</li>
-            <li>Matric: 00/2012</li>
-            <li>Graduation Year: 2019</li>
-        </ul>
-    </section>
-<section>
-  <h2>Update Profile</h2>
-  <form name="updateProfile">
-    <label>First Name:<input type="text" name="firstName"></laabel><br /><br />
-    <label>Last Name:<input type="text" name="lastName"></label><br /><br />
-    <label>Email Address:<input type="email" name="email"></label><br /><br />
-    <label>Matric Number:<input type="text" name="matricNumber"></label><br /><br />
-    <label>Program:
-      <select name="program">
+        header .left-nav {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 10px;
+        }
+        header .right-nav {
+            padding: 10px;
+        }
+
+        header h3 {
+            color: white;
+            padding-right: 10px;
+        }
+        
+        header form .form-control{
+            border: none;
+            margin-right: 5px;
+            padding-right: 10px;
+        }
+
+        header form input .btn .btn-outline-light {
+            border: 1px solid white;
+            padding: 10px;
+        }
+
+        header a {
+            padding-left: 10px;
+            opacity: 0.5;
+            color: white;
+        }
+        header a:hover{
+            opacity: 1;
+        }
+         body {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+         }
+        main {
+            width: 960px;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        main section {
+          border-top: solid 1px lightgray;
+          margin-bottom: 30px;
+        }
+
+        main .container {
+          align-items: center;
+          }
+
+          main .container .row {
+            align-items: center;
+          }
+
+        main .container .col{
+          display: flex;
+          background-color: rgb(248, 242, 242);
+          justify-content: space-between;
+          padding-right: 200px;
+          margin-bottom: 20px;
+        }
+
+        main .container h3 {
+          margin-right: 4px;
+        }
+
+        main .container h5 {
+          margin-left: 4px;
+          margin-top: 5px;
+          color: darkgray;
+        }
+
+        main h2{
+          margin-top: 5px;
+        }
+
+        main .form-group {
+          margin-top: 20px;
+        }
+
+        main .form-group .form-control{
+          margin-right: 5px;
+            margin-top: 5px;
+        }
+
+        .update-profile .form-control {
+          width: 300px;
+        }
+
+        main .form-group .form-label{
+          margin-right: 5px;
+            margin-top: 5px;
+        }
+
+        footer {
+            width: 960px;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            color: grey;
+            background-color: lightgray;
+            padding: 10px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+        }
+        
+        footer .spacer{
+            padding: 0px 5px 0 5px;
+        }
+
+        footer a{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="left-nav">
+        <div>
+            <h3>Project Explorer</h3>
+        </div>
+        <form name="searchForm" class="form-inline">
+            <input type="text" placeholder="Search Projects" class="form-control"/>
+            <input type="button" class="btn btn-outline-light" value="Search"/>
+        </form>
+        <div>
+            <a href="#">Submit</a>
+        </div>
+    </div>
+
+    <div class="right-nav">
+        <a href="register.html">Sign up</a>
+        <a href="login.html">Login</a>
+    </div>
+</header>
+
+<main>
+  <div class="container">
+    <div class="row">
+      <h3>John Doe</h3>
+      <h5>john.doe@gmail.com</h5>
+    </div>
+    <div class="col">
+          <p>Program</br> Computer Science</p>
+    
+          <p>Matriculation number</br> 00/2012</p>
+
+          <p>Graduation Year</br> 2019</p>
+    </div>
+</div>
+  
+  <h5>Update Profile</h5>
+  <section class="update-profile">
+  <form class="form-group mx-auto w-75" name="updateProfile">
+   <div class="form-row">
+   <label class="form-label">First Name
+     <input type="text" name="firstName" placeholder="" class="form-control"></label>
+   <label class="form-label">Last Name
+     <input type="text" name="lastName" placeholder="" class="form-control"></label>
+   </div>
+   <div class="form-row">
+   <label class="form-label">Email Address
+     <input type="email" name="email" placeholder="" class="form-control"></label>
+     <label class="form-label">Program
+      <select name="program" class="form-control">
+        <option value="choose">Choose...</option>
         <option value="computer_science">Computer Science</option>
         <option value="computer_information_systems">Computer Information Systems</option>
         <option value="computer_technology">Computer Technology</option>
       </select>
     </label>
-   <br/>
-   <br/>
-   <label>Graduation Year: 
-      <select name="graduationYear">
-       <option value="2013">2013</option> 
-       <option value="2014">2014</option>
-       <option value="2015">2015</option>
-       <option value="2016">2016</option>
-       <option value="2017">2017</option>
-       <option value="2018">2018</option>
-       <option value="2019">2019</option>
-       <option value="2020">2020</option>
-      </select>
-    </label>
-   <br />
-   <br/>
-    <input type="submit">
-</form>
-</section>
-<section>
-  <form>
-    <h1>Change Password</h1>
-    <label>Current Password: <input type="password" name="currentPassword" ></label><br /><br />
-    <label>New Password: <input type="password" name="newPassword"></label><br /><br />
-    <label>Confirm Password: <input type="password" name="confirmPassword" ></label><br /><br />
-    <input type="submit">         
+   </div>
+   <div class="form-row">
+   <label class="form-label">Matric Number
+     <input type="text" name="matricNumber" placeholder="" class="form-control"></label>
+  <label class="form-label">Graduation Year 
+     <select name="graduationYear" class="form-control">
+       <option value="choose">Choose...</option>
+      <option value="2013">2013</option> 
+      <option value="2014">2014</option>
+      <option value="2015">2015</option>
+      <option value="2016">2016</option>
+      <option value="2017">2017</option>
+      <option value="2018">2018</option>
+      <option value="2019">2019</option>
+      <option value="2020">2020</option>
+     </select>
+   </label>
+ </div>
+ <input type="button" class="btn btn-primary" value="Update Profile"/>
+ </form>
+  </section>
+
+
+  <h5>Change Password</h5>
+  <section>
+  <form class="form-group mx-auto w-75">
+    <div class="form-row">
+    <label class="form-label">Current Password <input class="form-control" type="password" placeholder="Current Password" name="currentPassword" ></label>
+    <label class="form-label">New Password <input class="form-control" type="password" placeholder="Your new password" name="newPassword"></label>
+    <label class="form-label">Confirm Password <input class="form-control" type="password" placeholder="Confirm new Password" name="confirmPassword" ></label>
+    </div>
+    <input type="button" class="btn btn-primary" value="Change Password"/>  
  </form>
 </section>
+
+</main>
+
+<footer>
+  <span>Project Explorer &copy; 2020</span>
+  <span class="spacer">&middot;</span>
+  <a href="#">Edconnect</a>
+</footer>
+</body>
